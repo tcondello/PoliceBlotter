@@ -28,6 +28,11 @@
                 <li role="presentation"><a href="./IncidentTotals.php" target="_blank">Incident Totals</a></li>
                 <li role="presentation"><a href="./YesterdayDescriptionCount.php" target="_blank">Yesterday Description Totals</a></li>
             </ul>
+            <ul class="nav nav-pills">
+                <li role="presentation"><button onClick="toggleLayer(0)">Council District</button></li>
+                <li role="presentation"><a onClick="toggleLayer(1)">Neighborhood</a></li>
+                <li role="presentation"><a onClick="toggleLayer(2)">Police Zones</a></li>
+            </ul>
         </div>
         <div class="row">
             <div id="map-canvas"></div>
