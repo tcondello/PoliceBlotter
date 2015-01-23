@@ -1,10 +1,4 @@
 <!--
- ______   __     __    __        ______
-/\__  _\ /\ \   /\ "-./  \      /\  ___\
-\/_/\ \/ \ \ \  \ \ \-./\ \     \ \ \____
-   \ \_\  \ \_\  \ \_\ \ \_\     \ \_____\
-    \/_/   \/_/   \/_/  \/_/      \/_____/
-
     Created by Mac-astr010 on 1/20/15.
 --->
 <!DOCTYPE html>
@@ -21,16 +15,17 @@
     <div class="container">
         <div class="page-header text-center">
             <h3 class="text-danger">Police Blotter Index</h3>
-            <ul class="nav nav-pills">
+<!--             <ul class="nav nav-pills">
                 <li role="presentation"><a href="http://ec2-54-90-254-168.compute-1.amazonaws.com/blotter/" target="_blank">Open Blotter</a></li>
                 <li role="presentation"><a href="http://ec2-54-165-176-227.compute-1.amazonaws.com/PhpPittsburghBrigade/Descriptions.php" target="_blank">Description Totals</a></li>
                 <li role="presentation"><a href="http://ec2-54-165-176-227.compute-1.amazonaws.com/PhpPittsburghBrigade/IncidentTotals.php" target="_blank">Incident Totals</a></li>
                 <li role="presentation"><a href="http://ec2-54-165-176-227.compute-1.amazonaws.com/PhpPittsburghBrigade/YesterdayDescriptionCount.php" target="_blank">Yesterday Description Totals</a></li>
-            </ul>
+            </ul> -->
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a onClick="toggleLayer(Councilmap)">Council District</a></li>
+                <li role="presentation"><a onClick="toggleLayer(Councilmap)">Council District</a></li>
                 <li role="presentation"><a onClick="toggleLayer(Neighbormap)">Neighborhood</a></li>
                 <li role="presentation"><a onClick="toggleLayer(PoliceZmap)">Police Zones</a></li>
+                <li role="presentation" class="active"><a onClick="clearLayer()">None</a></li>
             </ul>
         </div>
         <div class="row">
