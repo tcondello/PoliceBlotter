@@ -2,17 +2,24 @@
  * Created by Mac-astr010 on 1/20/15.
  */
 var map;
+var blottererror = 'a';
 var style = {
     fillColor: 'green',
     strokeWeight: 1    
-}
+};
 var Councilmap = new google.maps.Data();
 Councilmap.loadGeoJson('json/CouncilDistrict.json');
 var Neighbormap = new google.maps.Data();
 Neighbormap.loadGeoJson('json/Neighborhood.json');
 var PoliceZmap = new google.maps.Data();
 PoliceZmap.loadGeoJson('json/PoliceZones.json');
-
+$(document).ready(function(){
+    if(blottererror === ''){
+        $("div.alert-danger").show();
+    }else{
+        $("div.alert-danger").hide();
+    }
+});
 function changeActive(){
   $(document).ready(function () {
         $('ul.nav > li').click(function (e) {
@@ -33,7 +40,7 @@ function setMouseover (layer){
               fillOpacity: 0.1
         });
     });
-    layer.addListener('mouseout', function (event) {
+    layer.addListener('mouseout', function () {
         layer.revertStyle();
     });
 }
@@ -53,13 +60,11 @@ function initialize() {
     map = new google.maps.Map(document.getElementById("map-canvas"), {
         center: new google.maps.LatLng(40.435467, -79.996404),
         zoom: 12,
-        mapTypeId: 'roadmap',
+        mapTypeId: 'roadmap'
     });    
 
 }
 google.maps.event.addDomListener(window, 'load', initialize);
-
-
 
 //notes
 //
